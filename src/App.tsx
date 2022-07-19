@@ -5,6 +5,7 @@ import {Posts} from "./pages/Posts";
 import {Auth} from "./pages/Auth";
 import {Post} from "./pages/Post";
 import {Navigation} from "./components/Navigation";
+import './index.css';
 
 function App() {
   return (
