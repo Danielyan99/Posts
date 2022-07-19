@@ -1,7 +1,12 @@
 import React from 'react'
+import {IPost} from "../models/models";
 
-export function Post() {
+interface PostProps {
+  post: IPost
+}
+
+export function Post({ post }: PostProps) {
   return (
-    <div>Current Post</div>
+    <div>{post.title}</div>
   )
 }
