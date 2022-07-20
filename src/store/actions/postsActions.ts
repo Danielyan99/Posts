@@ -14,3 +14,14 @@ export const fetchPosts = () => {
     }
   }
 }
+
+export const deletePost = (id: Number) => {
+  return async(dispatch: Dispatch) => {
+    try {
+      await axios.delete(`posts/${id}`)
+      dispatch(postSlice.actions.deletePost(id))
+    } catch (e) {
+      dispatch(postSlice.actions.fetchError(e as Error))
+    }
+  }
+}

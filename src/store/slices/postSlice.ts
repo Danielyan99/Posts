@@ -27,6 +27,9 @@ export const postSlice = createSlice({
     fetchError(state, action: PayloadAction<Error>) {
       state.loading = false
       state.error = action.payload.message
+    },
+    deletePost(state, action: PayloadAction<Number>) {
+      state.posts = state.posts.filter(post => post.id !== action.payload)
     }
   }
 })
