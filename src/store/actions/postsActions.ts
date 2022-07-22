@@ -25,3 +25,13 @@ export const deletePost = (id: Number) => {
     }
   }
 }
+
+export const fetchPost = (id: Number) => {
+  return async(dispatch: Dispatch) => {
+    try {
+      const response = await axios.get(`posts/${id}`)
+      console.log(response)
+    } catch (e) {
+    }
+  }
+}

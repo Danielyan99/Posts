@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useAppDispatch, useAppSelector} from "../hook/redux";
 import {fetchPosts} from "../store/actions/postsActions";
-import {Post} from "./Post";
+import {Post} from "../components/Post";
 import {Spinner} from "../components/spinner/Spinner";
 
 export function Posts() {

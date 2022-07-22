@@ -30,7 +30,7 @@ export const postSlice = createSlice({
     },
     deletePost(state, action: PayloadAction<Number>) {
       state.posts = state.posts.filter(post => post.id !== action.payload)
-    }
+    },
   }
 })
 
